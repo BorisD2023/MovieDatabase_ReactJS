@@ -1,18 +1,17 @@
-
 const MovieCard = (props) => {
     console.log(props);
-    return ( 
+    return (
         <>
-                <article className="movie-card">
-                    <h5>{props.title}</h5>
-                    <h5>{props.year}</h5>
-                    <h5>{props.director}</h5>
-                    <h5>{props.duration}</h5>
-                    <h5>{props.rate}</h5>
-                    <div>
-                        {props.genre.map((elm, index) =>(
-                            <p key={index}>{elm}</p>
-                        ))}
+            <article className="movie-card">
+                <h2>{props.title}</h2>
+                <p>{props.year}</p>
+                <h3>{props.director}</h3>
+                <h5>{props.duration}</h5>
+                <h4>{props.rate}</h4>
+                <div>
+                    {props.genre.map((elm, index) => (
+                        <p key={index}>{elm}</p>
+                    ))}
                     {/* <p>{props.genre[0]}</p>
                     <p>{props.genre[1]}</p>
                     <p>{props.genre[2]}</p>
@@ -20,10 +19,10 @@ const MovieCard = (props) => {
                     <p>{props.genre[4]}</p>
                     <p>{props.genre[5]}</p>
                     <p>{props.genre[6]}</p> */}
-                    </div>
-                </article>
+                </div>
+            </article>
         </>
-     );
-}
- 
+    );
+};
+
 export default MovieCard;
